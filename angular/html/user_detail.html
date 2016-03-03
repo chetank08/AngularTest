@@ -1,0 +1,36 @@
+<!-- user_detail.html -->
+<br/>
+<div class="row-fluid">
+	<div class="col-md-3 div_detail">
+		<h4>{{userDetailCtrl.userDetails.name}}</h4>
+		<p>Username: {{userDetailCtrl.userDetails.username}}</p>
+		<p>Email: {{userDetailCtrl.userDetails.email}}</p>
+		<p>Address:{{userDetailCtrl.userDetails.address.street}},{{userDetailCtrl.userDetails.address.suite}},{{userDetailCtrl.userDetails.address.city}},<br/>zip-{{userDetailCtrl.userDetails.address.zipcode}}, lat-{{userDetailCtrl.userDetails.address.geo.lat}}, lng-{{userDetailCtrl.userDetails.address.geo.lng}}</p><br/>
+		<p>Phone: {{userDetailCtrl.userDetails.phone}}</p><br/>
+		<p>Website: {{userDetailCtrl.userDetails.website}}</p><br/>
+		<p>Company: {{userDetailCtrl.userDetails.company.name}}<br/>catch phrase-{{userDetailCtrl.userDetails.company.catchPhrase}}<br/>{{userDetailCtrl.userDetails.company.bs}}</p>
+	</div>
+	<div class="col-md-9">
+		<!---<div class="well">
+			<h4>Listing Comments</h4>
+			<hr/>
+
+		</div>	---->
+		<div class="well">
+			<h4>Listing Todos</h4>
+			<hr/>
+			<table style="width:80%;margin:auto;text-align:center;">
+				<tr>
+					<th>Sr.No</th>
+					<th>Title</th>
+					<th>Status</th>
+				</tr>
+				<tr ng-repeat="todo in userDetailCtrl.UserTodos track by $index">
+					<td>{{$index+1}}</td>
+					<td>{{todo.title}}</td>
+					<td><span ng-class="todo.completed?'glyphicon glyphicon-ok':'glyphicon glyphicon-remove'"></span></td>
+				</tr>
+			</table>
+		<div>		
+	</div>
+<div>

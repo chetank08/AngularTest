@@ -1,0 +1,15 @@
+<!-- home.html -->
+    <div class="jumbotron text-center">
+      <div class="MainDivContainer">
+        <br/>
+  		<select id="sl_input" ng-model="homeCtrl.drpdwn_value">
+  			<option ng-show="homeCtrl.drpdwn_value == '' || homeCtrl.drpdwn_value == null" ng-selected="homeCtrl.drpdwn_value == null" value="">--- Please select ---</option>
+  			<option value="post">Post</option>
+  			<option value="user">User</option>
+  			<option value="new_post">New Post</option>
+  		</select>
+        <input class="input" type="number" name="id" ng-show="homeCtrl.drpdwn_value == 'user' || homeCtrl.drpdwn_value == 'new_post'" ng-model="homeCtrl.userId" placeholder="Enter User ID">
+        <input type="number" name="id" ng-show="homeCtrl.drpdwn_value == 'post'" ng-model="homeCtrl.postId" placeholder="Enter Post ID">
+        <button type="btn" class="btn btn-primary btn-lg" ng-disabled="homeCtrl.drpdwn_value == ''" ng-click="homeCtrl.proceed();">Proceed</button>
+      </div>
+    </div>

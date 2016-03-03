@@ -1,0 +1,8 @@
+<!-- new_post.html -->
+    <div class="jumbotron text-center">
+      <div class="AddNewContainer">
+       <input type="text" name="txt_post_title" ng-model="addPostCtrl.p_title" placeholder="Post title" style="width:400px;"><br/>
+       <textarea type="textarea" name="txt_post_body" ng-model="addPostCtrl.p_body" placeholder="Post body"  style="max-height:250px;;max-width:400px;width:400px;border-radius:4px;margin-bottom:5px;"></textarea><br/>
+       <button type="button" class="btn btn-primary btn-lg" ng-click="addPostCtrl.add_post();"  style="width:400px;">Save</button>
+      </div>
+    </div>

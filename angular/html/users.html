@@ -1,0 +1,26 @@
+<!-- users.html -->
+<h3>All Users</h3>
+<div class="table-responsive">
+  <table>
+    <tr>
+    	<th>ID</th>
+    	<th>Name</th>
+    	<th>Username</th>
+    	<th>Email</th>
+    	<th>Address</th>
+    	<th>Phone</th>
+    	<th>Website</th>
+    	<th>Company</th>
+    </tr>
+    <tr ng-repeat="user in userCtrl.users">
+    	<td>{{user.id}}</td>
+    	<td><a ui-sref="user({userId: user.id})">{{user.name}}</a></td>
+    	<td>{{user.username}}</td>
+    	<td>{{user.email}}</td>
+    	<td>{{user.address.street}},{{user.address.suite}},{{user.address.city}},<br/>zip-{{user.address.zipcode}}, lat-{{user.address.geo.lat}}, lng-{{user.address.geo.lng}}</td>
+    	<td>{{user.phone}}</td>
+    	<td>{{user.website}}</td>
+    	<td>{{user.company.name}}<br/>catch phrase-{{user.company.catchPhrase}}<br/>{{user.company.bs}}</td>
+    <tr/>
+  </table>
+</div>
